@@ -1,0 +1,7 @@
+data.items -> returns an array of data (length is 10)
+data[i].displayLink - returns link according to search query
+data[i].htmlSnippet
+data[i].htmlTitle
+data[i].title
+data[i].link
+data[i].snippet
