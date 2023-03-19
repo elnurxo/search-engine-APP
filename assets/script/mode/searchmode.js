@@ -4,6 +4,7 @@ let nav = document.querySelector("nav");
 let main = document.querySelector("main");
 let dropDown = document.querySelector(".links-dropdown");
 let articleTitle = document.querySelector("article");
+let dataRow = document.querySelector(".data-row");
 
 //get mode from local storage
 let modeLocalStr = localStorage.getItem("dark");
@@ -17,6 +18,12 @@ if (modeLocal) {
   main.classList.add("dark-main");
   dropDown.classList.add("dark-links-dropdown");
   articleTitle.classList.add("dark-title");
+
+  //card-data
+  for (let i = 0; i < dataRow.children.length; i++) {
+    dataRow.children[i].children[1].children[0].children[0].style.color =
+      "white";
+  }
 } else {
   icon.classList.replace("fa-sun", "fa-moon");
   mode.classList.remove("dark-mode-wrapper");
@@ -27,6 +34,12 @@ if (modeLocal) {
   dropDown.classList.remove("dark-links-dropdown");
   articleTitle.classList.remove("dark-title");
   articleTitle.style.transition = ".3s";
+
+  //card-data
+  for (let i = 0; i < dataRow.children.length; i++) {
+    dataRow.children[i].children[1].children[0].children[0].style.color =
+      "black";
+  }
 }
 
 //mode click
@@ -43,6 +56,12 @@ mode.addEventListener("click", function () {
 
     //set dark mode to local storage
     localStorage.setItem("dark", true);
+
+    //card-data
+    for (let i = 0; i < dataRow.children.length; i++) {
+      dataRow.children[i].children[1].children[0].children[0].style.color =
+        "white";
+    }
   }
   //switching to light mode
   else {
@@ -58,5 +77,11 @@ mode.addEventListener("click", function () {
 
     //set dark mode to local storage
     localStorage.setItem("dark", false);
+
+    //card-data
+    for (let i = 0; i < dataRow.children.length; i++) {
+      dataRow.children[i].children[1].children[0].children[0].style.color =
+        "black";
+    }
   }
 });

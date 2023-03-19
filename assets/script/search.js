@@ -69,10 +69,6 @@ fetchData().then(data => {
 })
 
 
-
-
-
-
 //Modal
 var modal = document.querySelector("#myModal");
 var modalImg = document.querySelector(".modal-content");

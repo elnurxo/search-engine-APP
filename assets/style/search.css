@@ -47,6 +47,11 @@ article .search-query {
 }
 .data-column-title {
   margin-left: 50px;
+  width: 69%;
+  word-wrap: break-word;
+  white-space: initial;
+  height: 40%;
+  overflow: hidden;
 }
 .data-column-title a {
   text-decoration: none;
@@ -60,6 +65,10 @@ article .search-query {
 .data-column .data-column-img img{
     transition: .3s ease;
     cursor: pointer;
+    filter: brightness(66%);
+}
+.data-column .data-column-img img:hover{
+  filter:brightness(100%);
 }
 .modal {
   display: none;
@@ -146,6 +155,11 @@ article .search-query {
     }
     .data-column-img{
         width: 500px !important;
+    }
+    .data-column-title{
+      margin-left: 10px;
+      width: 100%;
+      height: 90%;
     }
     .data-column-title h5 a{
         font-size: 9px !important;
