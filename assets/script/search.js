@@ -14,7 +14,8 @@ let searchQuery = new URLSearchParams(location.search).get("search");
 let pageSize = 15;
 let pageNumber = 2;
 let errorMsg = 'You have exceeded the DAILY quota for requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/contextualwebsearch/api/web-search';
-//100 REQUESTS PER DAY
+
+//100 REQUESTS PER DAY (API)
 let API_URL = `https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/ImageSearchAPI?q=${searchQuery}&pageNumber=${pageNumber}&pageSize=${pageSize}&autoCorrect=true`;
 
 //title
